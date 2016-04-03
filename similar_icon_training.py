@@ -63,8 +63,11 @@ if __name__ == '__main__':
 					to_class_goal_folder = main_folder + sub_folder1 + each_class + "/manual/"
 					print "Random: " + icon_orign + " \nCompare with: " + icon_new + "\n Value: " + str(dis)
 					#back check
-					shutil.copy(icon_orign, "my_test")
-					shutil.move(icon_orign, to_class_goal_folder)
+					# shutil.copy(icon_orign, "my_train_output")
+					# shutil.move(icon_orign, to_class_goal_folder)
+
+					# (final) if not too much left, then final round using move to output folder instead of  move to manual
+					shutil.move(icon_orign, "my_train_output")
 
 			#after compare with out_test_all, then compare with manual and keep adding
 			each_class_folder = os.listdir(main_folder + sub_folder1 + each_class + "/manual/")
