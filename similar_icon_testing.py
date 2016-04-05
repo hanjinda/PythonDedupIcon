@@ -42,6 +42,11 @@ if __name__ == '__main__':
 		for each_class in classes_folder:
 			if each_class == ".DS_Store":
 				continue
+
+			#for testing in one folder: shopping cart
+			if each_class != "shoppingcart":
+				continue
+
 			#print "Class: " + each_class
 			each_class_folder = os.listdir(main_folder + sub_folder1 + each_class + "/out_testing_all/")
 
